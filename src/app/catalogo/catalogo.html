@@ -1,0 +1,14 @@
+<div class="catalogo-container">
+  <h3 class="text-center mb-4 fw-bold">Catálogo de Películas</h3>
+
+  <div class="peliculas-grid">
+    <div class="pelicula-card" *ngFor="let p of peliculas">
+      <img [src]="p.imagen" alt="{{p.nombre}}" class="pelicula-img">
+      <h5>{{ p.nombre }}</h5>
+      <p><strong>Año:</strong> {{ p.anio }}</p>
+      <p><strong>Género:</strong> {{ p.genero }}</p>
+      <p class="precio">$ {{ p.precio | number }}</p>
+    </div>
+  </div>
+</div>
+
